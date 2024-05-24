@@ -1,0 +1,100 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-image: url('../img/pexels-nubikini-386009.jpg');
+}
+section{
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+
+}
+section .imgbx{
+    position: relative;
+    width: 50%;
+    height: 100%;   
+}
+section .imgbx:before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /* background: linear-gradient(225deg,#e91e63,#03a9f4); */
+    z-index: 1;
+    mix-blend-mode: screen;
+
+
+}
+section .imgbx img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+section .contentbx{
+    display: flex;
+    width: 50%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+
+}
+section .contentbx .form{
+    width: 50%;
+}
+section .contentbx .form h2{
+    color: blue;
+    font-size: 50px;
+    margin-bottom: 20px;
+    border-bottom: 4px solid red;
+    display: inline-block;
+}
+section .contentbx .form .inputbx{
+    margin-bottom: 20px;
+}
+section .contentbx .form .inputbx label{
+    font-size: 15px;
+    margin-bottom: 5px;
+    display: inline-block;
+    color: black;
+    font-size: 30px;
+    font-weight: 900;
+}
+section .contentbx .form .inputbx span{
+    font-size: 20px;
+    
+}
+section .contentbx .form .inputbx input{
+    width: 100%;
+    padding: 10px 20px;
+    outline: none;
+    border: 1px solid black;
+    font-size: 20px;
+    letter-spacing: 1px;
+    color: black;
+    background: transparent;
+    border-radius: 30px;
+}
+section .contentbx .form .inputbx input[type="submit"]{
+    background-color: #CF9FFF;
+    outline: none;
+    border: none;
+    cursor: pointer;
+}
+section .contentbx .form .inputbx input[type="submit"]:hover{
+    background: pink;
+}
+section .contentbx .form .remember{
+    margin-bottom: 10px;
+    color: green;
+    font-size: 25px;
+}
+

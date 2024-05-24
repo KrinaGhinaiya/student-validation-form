@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/login.css">
+    <link rel="stylesheet" href="js/login.js">
+</head>
+
+<body>
+    <section>
+
+        <div class="imgbx">
+            <img src="img/pexels-nubikini-386009.jpg">
+
+
+        </div>
+        <div class="contentbx">
+            <div class="form">
+                <h2>Login </h2>
+                <form id="form" action="newpage.html" onsubmit=functionX()>
+                    <div class="inputbx">
+                        <label>Username</label>
+                        <input type="text" name="" id="name" placeholder="Enter Username">
+                        <span style="color:red" id="name_error"></span>
+                    </div>
+                    <div class="inputbx">
+                        <label>Email</label>
+                        <input type="email" name="" id="email" placeholder="Enter Email">
+                        <span style="color:red" id="email_error"></span>
+                    </div>
+                    <div class="inputbx">
+                        <label>Password</label>
+                        <input type="password" name="" id="password" placeholder="Enter Password">
+                        <span style="color:red" id="password_error"></span>
+                    </div>
+                    <div class="remember">
+                        <label><input type="checkbox" name="" id="">confirm password</label>
+                    </div>
+                    <div class="inputbx">
+                        <input class="register-button" onclick="redirectFunction()" type="submit">
+                    </div>
+
+                </form>
+
+            </div>
+        </div>
+    </section>
+
+    <script>
+        // function redirectFunction() {
+        //     window.location.href = "thank-you.html";
+        // }
+        let name = document.getElementById('name').value;
+        let email = document.getElementById('email').value;
+        let password = document.getElementById('password').value;
+        let form = document.getElementById('form');
+
+        let name_error = document.getElementById('name_error');
+        let email_error = document.getElementById('email_error');
+        let password_error = document.getElementById('password_error');
+
+        if (name !== "" && email !== "" && password != "") {
+
+            form.addEventListener('submit', (e) => {
+                let email_check = /^([A-Za-z0-9_\-\.])+\@([A-Za-z0-9_\-\.])+\.([A-Za-z]{2,4})$/;
+
+                // if (name.value === '' || name.value == null) {
+                //     e.preventDefault();
+                //     name_error.innerHTML = "Name is required";
+                // }
+                // else {
+                //     name_error.innerHTML = "";
+                // }
+                // if (!email.value.match(email_check)) {
+                //     e.preventDefault();
+                //     email_error.innerHTML = "valid email is required";
+
+                // }
+                // else {
+                //     email_error.innerHTML = "";
+                // }
+                // if (password.value.length <= 5) {
+                //     e.preventDefault();
+                //     password_error.innerHTML = "Password must be more than 6 character ";
+                // }
+                // else {
+                //     password_error.innerHTML = "";
+                // }
+                // if (password.value.length >= 16) {
+                //     e.preventDefault();
+                //     password_error.innerHTML = "Password cannot be more than 16 character ";
+                // }
+                if (password.length >= 8 || password.length <= 16) {
+                    window.location.href = "thank-you.html";
+                }
+                else {
+                    e.preventDefault();
+                    password_error.innerHTML = "please enter password between 8 to 16 character ";
+                }
+            });
+        } else {
+            alert("please fill all the details");
+        }
+    </script>
+</body>
+
+</html>
+krina shubham
